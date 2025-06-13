@@ -1,7 +1,9 @@
 import React from 'react';
 import { TrendingUp, DollarSign, Calendar, Mail, Phone, Clock } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 
 const Dashboard: React.FC = () => {
+  const { t } = useTranslation();
   const kpiCards = [
     { title: 'Open Deals', value: '127', change: '+12%', icon: TrendingUp, color: 'blue' },
     { title: 'Closed Deals', value: '43', change: '+8%', icon: DollarSign, color: 'green' },
@@ -40,7 +42,7 @@ const Dashboard: React.FC = () => {
     <div className="space-y-6">
       <div className="flex justify-between items-center">
         <div>
-          <h1 className="text-2xl font-bold text-gray-900">Dashboard</h1>
+          <h1 className="text-2xl font-bold text-gray-900">{t('dashboard')}</h1>
           <p className="text-gray-600">Welcome back! Here's what's happening with your business.</p>
         </div>
       </div>

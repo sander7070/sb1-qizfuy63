@@ -1,4 +1,5 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import { 
   LayoutDashboard, 
   Users, 
@@ -16,15 +17,16 @@ interface SidebarProps {
 }
 
 const Sidebar: React.FC<SidebarProps> = ({ activeTab, setActiveTab }) => {
+  const { t } = useTranslation();
   const menuItems = [
-    { id: 'dashboard', label: 'Dashboard', icon: LayoutDashboard },
-    { id: 'clients', label: 'Clients', icon: Users },
-    { id: 'deals', label: 'Deals', icon: Handshake },
-    { id: 'tasks', label: 'Tasks', icon: CheckSquare },
-    { id: 'emails', label: 'Emails', icon: Mail },
-    { id: 'calls', label: 'Calls', icon: Phone },
-    { id: 'reports', label: 'Reports', icon: BarChart3 },
-    { id: 'settings', label: 'Settings', icon: Settings },
+    { id: 'dashboard', label: t('dashboard'), icon: LayoutDashboard },
+    { id: 'clients', label: t('clients'), icon: Users },
+    { id: 'deals', label: t('deals'), icon: Handshake },
+    { id: 'tasks', label: t('tasks'), icon: CheckSquare },
+    { id: 'emails', label: t('emails'), icon: Mail },
+    { id: 'calls', label: t('calls'), icon: Phone },
+    { id: 'reports', label: t('reports'), icon: BarChart3 },
+    { id: 'settings', label: t('settings'), icon: Settings },
   ];
 
   return (
