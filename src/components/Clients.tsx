@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
 import { Search, Filter, Plus, Mail, Phone, MapPin, Tag, FileText, Calendar, PhoneCall, Folder } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 
 const Clients: React.FC = () => {
+  const { t } = useTranslation();
   const [selectedClient, setSelectedClient] = useState<number | null>(null);
   const [activeDetailTab, setActiveDetailTab] = useState('info');
 
@@ -88,11 +90,11 @@ const Clients: React.FC = () => {
     return (
       <div className="space-y-6">
         <div className="flex items-center justify-between">
-          <button 
+          <button
             onClick={() => setSelectedClient(null)}
             className="text-blue-600 hover:text-blue-800 font-medium"
           >
-            ← Back to Clients
+            ← {t('back_to_clients')}
           </button>
           <button className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg flex items-center space-x-2 transition-colors">
             <Plus size={16} />
@@ -178,7 +180,7 @@ const Clients: React.FC = () => {
     <div className="space-y-6">
       <div className="flex justify-between items-center">
         <div>
-          <h1 className="text-2xl font-bold text-gray-900">Clients</h1>
+          <h1 className="text-2xl font-bold text-gray-900">{t('clients')}</h1>
           <p className="text-gray-600">Manage your client relationships and data</p>
         </div>
         <button className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg flex items-center space-x-2 transition-colors">
