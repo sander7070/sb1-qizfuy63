@@ -1,0 +1,13 @@
+{
+  "dashboard": "Dashboard",
+  "clients": "Clients",
+  "deals": "Deals",
+  "tasks": "Tasks",
+  "emails": "Emails",
+  "calls": "Calls",
+  "reports": "Reports",
+  "settings": "Settings",
+  "new": "New",
+  "search_placeholder": "Search clients, deals, tasks...",
+  "back_to_clients": "Back to Clients"
+}
