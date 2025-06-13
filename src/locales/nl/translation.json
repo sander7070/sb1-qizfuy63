@@ -1,0 +1,13 @@
+{
+  "dashboard": "Dashboard",
+  "clients": "Klanten",
+  "deals": "Deals",
+  "tasks": "Taken",
+  "emails": "E-mails",
+  "calls": "Gesprekken",
+  "reports": "Rapporten",
+  "settings": "Instellingen",
+  "new": "Nieuw",
+  "search_placeholder": "Zoek in klanten, deals, taken...",
+  "back_to_clients": "Terug naar klanten"
+}
